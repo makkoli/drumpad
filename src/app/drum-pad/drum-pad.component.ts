@@ -17,7 +17,7 @@ export class DrumPadComponent implements OnChanges {
   @ViewChild(MatRipple) ripple: MatRipple;
 
   @Input() color: string;
-  @Input() currentCode: object;
+  @Input() currentKey: object;
   @Input() keyCode: string;
   @Input() url: string;
 
@@ -26,8 +26,8 @@ export class DrumPadComponent implements OnChanges {
   playing: boolean = false;
 
   ngOnChanges(changes: SimpleChanges) {
-    if (!changes.currentCode.firstChange
-      && this.keyCode === changes.currentCode.currentValue.key) {
+    if (!changes.currentKey.firstChange
+      && this.keyCode === changes.currentKey.currentValue.key) {
 
       this.playSound();
 

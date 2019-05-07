@@ -10,14 +10,15 @@ import { DRUMPAD_DATA } from './data';
 export class AppComponent {
 
   drumPadData: object[] = DRUMPAD_DATA;
-  currentCode: object;
+  currentKey: object;
 
   @HostListener('window:keydown', ['$event'])
   keyEvent(event: KeyboardEvent) {
-    const currentCode = DRUMPAD_DATA.find(code => code.key === event.key);
+    const currentKey = DRUMPAD_DATA.find(code => code.key === event.key);
 
-    if (!!currentCode) {
-      this.currentCode = Object.assign({}, currentCode);
+    if (!!currentKey) {
+      this.currentKey = Object.assign({}, currentKey);
+      document.body.style.backgroundColor = currentKey.color;
     }
   }
 }

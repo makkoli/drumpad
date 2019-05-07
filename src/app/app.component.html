@@ -2,7 +2,7 @@
   <span *ngFor="let data of drumPadData; let i = index">
     <app-drum-pad
       color="{{data.color}}"
-      [currentCode]="currentCode"
+      [currentKey]="currentKey"
       keyCode="{{data.key}}"
       url="{{data.url}}"
     ></app-drum-pad>
@@ -10,5 +10,5 @@
   </span>
 </div>
 <app-label
-  [currentCode]="currentCode"
+  [currentKey]="currentKey"
 ></app-label>

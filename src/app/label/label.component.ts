@@ -7,7 +7,7 @@ import { Component, Input } from '@angular/core';
 })
 export class LabelComponent {
 
-  @Input() currentCode: object;
+  @Input() currentKey: object;
 
   constructor() { }
 }

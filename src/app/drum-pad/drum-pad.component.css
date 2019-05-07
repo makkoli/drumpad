@@ -1,6 +1,7 @@
 .ripple-container {
   text-align: center;
   display: inline-block;
+  background: white;
 
   width: 200px;
   height: 200px;
